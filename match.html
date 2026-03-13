@@ -81,7 +81,7 @@ font-size:26px;
 letter-spacing:2px;
 font-weight:700;
 text-align:center;
-text-shadow:0 0 6px rgba(255,255,255,0.35);
+text-shadow:0 0 6px rgba(255,255,255,0.35),0 2px 4px rgba(0,0,0,0.6);
 }
 
 .subtitle{
@@ -90,6 +90,34 @@ letter-spacing:4px;
 opacity:0.85;
 margin-top:4px;
 font-weight:500;
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:-150%;
+width:120%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.2),
+transparent
+);
+
+transform:skewX(-20deg);
+animation:sweep 4s infinite;
+pointer-events:none;
+}
+
+@keyframes sweep{
+0%{
+left:-150%;
+}
+100%{
+left:150%;
+}
 }
 
 .logo-box{
@@ -127,9 +155,8 @@ box-shadow:0 3px 6px rgba(0,0,0,0.40);
 padding:8px 10px;
 color:white;
 font-weight:bold;
-
-clip-path: polygon(12px 0,100% 0, 100% calc(100% - 12px),
-calc(100% - 12px) 100%, 0 100%, 0 12px);
+box-shadow:0 3px 6px rgba(0,0,0,0.8),inset 0 1px 0 rgba(27, 4, 4, 0.25);
+clip-path: polygon(12px 0,100% 0, 100% calc(100% - 12px),calc(100% - 12px) 100%, 0 100%, 0 12px);
 }
 
 .team-bar .logo-box{
@@ -175,7 +202,12 @@ padding:5px;
 display:flex;
 justify-content:space-between;
 margin:6px 0;
-font-weight:500;
+border-bottom:1px solid rgba(0,0,0,0.08);
+padding-bottom:4px;
+}
+
+.row span:first-child{
+font-weight:700;
 }
 
 /* RESULT BAR */
@@ -186,11 +218,10 @@ color:white;
 text-align:center;
 font-weight:bold;
 padding:10px;
-
-clip-path: polygon(20px 0,100% 0,100% 100%,
-calc(100% - 20px) 100%, 0 100%, 0 20px);
-
+box-shadow:0 4px 10px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.25);
+clip-path: polygon(20px 0,100% 0,100% 100%,calc(100% - 20px) 100%, 0 100%, 0 20px);
 }
+
 
 </style>
 
