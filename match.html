@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>India vs West Indies Match Summary</title>
+
+<style>
+
+ body
+ {
+    background:#160e0e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing:2px;
+    font-weight:700;
+    
+ }
+
+ .container
+ {
+    background:linear-gradient(120deg,#1b2f74,#5a0c0c);
+    padding:60px 40px;
+    border-radius:8px;
+    position: relative;
+    overflow: hidden;
+ }
+ .container::before{
+    content:"";
+    position:absolute;
+    left:-120px;
+    top:0;
+    width:260px;
+    height:100%;
+    background:linear-gradient(180deg,#ffcc00,#ff6a00);
+    transform:skewX(-25deg);
+    z-index:0;
+ }
+
+.container::after{
+    content:"";
+    position:absolute;
+    right:-120px;
+    top:0;
+    width:260px;
+    height:100%;
+    background:linear-gradient(180deg,#ff2b2b,#7a1530);
+    transform:skewX(-25deg);
+    z-index:0;
+ }
+/* MAIN CARD */
+ .card
+ {
+    width:520px;
+    background:#f2f2f2f3;
+    border-radius:4px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 2;
+ }
+
+/* HEADER */
+.header
+ {
+    background:linear-gradient(90deg,#0d1c5c,#243aa8);
+    color:white;
+    display:grid;
+    grid-template-columns: 60px 1fr 60px;
+    align-items:center;
+    text-align: center;
+    justify-content:space-between;
+    padding:10px 20px;
+    font-weight:bold;
+ }
+
+.title{
+font-size:26px;
+letter-spacing:2px;
+font-weight:700;
+text-align:center;
+text-shadow:0 0 6px rgba(255,255,255,0.35);
+}
+
+.subtitle{
+font-size:11px;
+letter-spacing:4px;
+opacity:0.85;
+margin-top:4px;
+font-weight:500;
+}
+
+.logo-box{
+width:36px;
+height:36px;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+.logo-box img{
+max-height:36px;
+max-width:36px;
+object-fit:contain;
+}
+.logo-box img[src*="west"]{
+transform:scale(1.25);
+}
+
+/* TEAM BOX */
+
+.team{
+margin:10px;
+border:1px solid #d0d0d0;
+}
+
+/* TEAM BAR */
+
+.team-bar{
+display:grid;
+grid-template-columns:50px 1fr 120px 80px;
+align-items:center;
+box-shadow:0 3px 6px rgba(0,0,0,0.40);
+padding:8px 10px;
+color:white;
+font-weight:bold;
+
+clip-path: polygon(12px 0,100% 0, 100% calc(100% - 12px),
+calc(100% - 12px) 100%, 0 100%, 0 12px);
+}
+
+.team-bar .logo-box{
+width:28px;
+height:28px;
+}
+
+.team-bar .logo-box img{
+max-height:24px;
+}
+
+
+.india{
+background:linear-gradient(45deg,#08237d,#2b2bec);
+}
+
+.wi{
+background:#7a1530;
+background:linear-gradient(45deg,#7a1530,#5a0b0b);
+}
+
+.score{
+text-align:right;
+font-size:22px;
+font-weight:900;
+letter-spacing:1px;
+}
+
+/* STATS AREA */
+
+.stats{
+display:grid;
+grid-template-columns:1fr 1fr;
+padding:10px;
+font-size:14px;
+}
+
+.column{
+padding:5px;
+}
+
+.row{
+display:flex;
+justify-content:space-between;
+margin:6px 0;
+font-weight:500;
+}
+
+/* RESULT BAR */
+
+.result{
+background:linear-gradient(90deg,#0d1c5c,#243aa8);
+color:white;
+text-align:center;
+font-weight:bold;
+padding:10px;
+
+clip-path: polygon(20px 0,100% 0,100% 100%,
+calc(100% - 20px) 100%, 0 100%, 0 20px);
+
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="container">
+<div class="card">
+
+<div class="header">
+    <div class="logo-box">
+
+        <img src="images/Flag_of_India.png">
+    </div>
+    <div class="title">MATCH SUMMARY
+    <div class="subtitle">T20 Match 2026</div>
+   </div>
+   <div class="logo-box">
+      <img src="images/westindies.png">
+   </div>
+</div>
+
+<!-- WEST INDIES -->
+
+<div class="team">
+
+<div class="team-bar wi">
+ <div class="logo-box">
+      <img src="images/westindies.png">
+   </div>
+<div>WEST INDIES</div>
+<div>20 OVERS</div>
+<div class="score">195-4</div>
+</div>
+
+<div class="stats">
+
+<div class="column">
+<div class="row"><span>Chase</span><span>40 (25)</span></div>
+<div class="row"><span>Holder</span><span>37 (22)</span></div>
+<div class="row"><span>Powell</span><span>34 (19)</span></div>
+
+</div>
+
+<div class="column">
+<div class="row"><span>Bumrah</span><span>2-36</span></div>
+<div class="row"><span>Pandya</span><span>1-40</span></div>
+<div class="row"><span>Chakaravarthy</span><span>1-40</span></div>
+</div>
+
+</div>
+
+</div>
+
+<!-- INDIA -->
+
+<div class="team">
+
+<div class="team-bar india">
+<div class="logo-box">
+
+        <img src="images/Flag_of_India.png">
+    </div>
+<div>INDIA</div>
+<div>20 OVERS</div>
+<div class="score">199-5</div>
+</div>
+
+<div class="stats">
+
+<div class="column">
+<div class="row"><span>Samson</span><span>97 (50)</span></div>
+<div class="row"><span>Varma</span><span>27 (10)</span></div>
+<div class="row"><span>Yadav</span><span>18 (16)</span></div>
+
+</div>
+
+<div class="column">
+<div class="row"><span>Holder</span><span>2-38</span></div>
+<div class="row"><span>Joseph</span><span>2-42</span></div>
+<div class="row"><span>Hosein</span><span>1-22</span></div>
+</div>
+
+</div>
+
+</div>
+
+<div class="result">
+INDIA WON BY 5 WICKETS
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
